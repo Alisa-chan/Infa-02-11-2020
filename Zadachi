@@ -1,0 +1,48 @@
+import math
+
+class Zadachi:
+    def __init__(self):
+        return 0;
+    def First(ch):
+        flag=((ch//100)>0) and ((ch//100)<10)
+        return (flag and (ch % 5 == 0))
+    def Second(ch1,ch2,ch3):
+        return (((ch1%2==0) and (ch2%2==0)) or ((ch1%2==0) and (ch3%2==0)) or ((ch2%2==0) and (ch3%2==0)))
+    def Third(x,y):
+        return ((x>=0) and (y<=1) and ((y>=x-1) or (x*x+y*y<=1)))
+    def Forth(x,y):
+        return ((y>=0) and (x>=0) and (y<=0,5) and (y<=math.sin(x)))
+    def Fifth(x,y):
+        return((x<=0 and x**2+y**2<=1) or (x>0 and y>=x and x**2+y**2<=1))
+        
+
+
+
+
+
+
+Vidyakin = Zadachi
+a=''
+print('-----------------------')
+while (a!='0'):
+    a=input()
+    if (a=='1'):
+        print('Input:')
+        print(Vidyakin.First(int(input())))
+        print('-----------------------')
+    if(a=='2'):
+        print('Input:')
+        print(Vidyakin.Second(int(input()),int(input()),int(input())))
+        print('-----------------------')
+    if(a=='3'):
+        print('Input:')
+        print(Vidyakin.Third(float(input()),float(input())))
+        print('-----------------------')
+    if(a=='4'):
+        print('Input:')
+        print(Vidyakin.Forth(float(input()),float(input())))
+        print('-----------------------')
+    if(a=='5'):
+        print('Input:')
+        print(Vidyakin.Fifth(float(input()),float(input())))
+        print('-----------------------')
